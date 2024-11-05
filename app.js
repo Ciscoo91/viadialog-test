@@ -16,6 +16,10 @@ app.post('/mybody', (req, res)=>{
   res.status(200).json(req.body)
 });
 
+app.get("/get-body", (req, res)=>{
+  res.status(200).json({id: 1, hello: "world"})
+});
+
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 server.keepAliveTimeout = 120 * 1000;
